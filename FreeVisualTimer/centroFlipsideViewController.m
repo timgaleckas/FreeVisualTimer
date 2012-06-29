@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 none. All rights reserved.
 //
 
-#import "centroFlipsideViewController.h"
+#import "CentroFlipsideViewController.h"
 
 @interface centroFlipsideViewController ()
 

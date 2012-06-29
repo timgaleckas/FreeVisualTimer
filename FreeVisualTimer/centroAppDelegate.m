@@ -8,7 +8,7 @@
 
 #import "centroAppDelegate.h"
 
-#import "centroMainViewController.h"
+#import "CentroMainViewController.h"
 
 @implementation centroAppDelegate
 
@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    centroMainViewController *controller = (centroMainViewController *)self.window.rootViewController;
+    CentroMainViewController *controller = (CentroMainViewController *)self.window.rootViewController;
     controller.managedObjectContext = self.managedObjectContext;
     return YES;
 }

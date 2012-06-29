@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 none. All rights reserved.
 //
 
-#import "centroMainViewController.h"
+#import "CentroMainViewController.h"
 
-@interface centroMainViewController ()
+@interface CentroMainViewController ()
 
 @end
 
-@implementation centroMainViewController
+@implementation CentroMainViewController
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize flipsidePopoverController = _flipsidePopoverController;

@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 none. All rights reserved.
 //
 
-#import "centroFlipsideViewController.h"
+#import "CentroFlipsideViewController.h"
 
-@interface centroMainViewController : UIViewController <centroFlipsideViewControllerDelegate, UIPopoverControllerDelegate>
+@interface CentroMainViewController : UIViewController <centroFlipsideViewControllerDelegate, UIPopoverControllerDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
