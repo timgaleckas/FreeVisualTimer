@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		821CE4D6159DE6F000E025DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D5159DE6F000E025DB /* UIKit.framework */; };
+		821CE4D8159DE6F000E025DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D7159DE6F000E025DB /* Foundation.framework */; };
+		821CE4DA159DE6F000E025DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D9159DE6F000E025DB /* CoreGraphics.framework */; };
+		821CE4DC159DE6F000E025DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4DB159DE6F000E025DB /* CoreData.framework */; };
+		821CE4E2159DE6F000E025DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 821CE4E0159DE6F000E025DB /* InfoPlist.strings */; };
+		821CE4E4159DE6F000E025DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE4E3159DE6F000E025DB /* main.m */; };
+		821CE4E8159DE6F000E025DB /* centroAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE4E7159DE6F000E025DB /* centroAppDelegate.m */; };
+		821CE4EB159DE6F000E025DB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821CE4E9159DE6F000E025DB /* MainStoryboard.storyboard */; };
+		821CE4EE159DE6F000E025DB /* FreeVisualTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 821CE4EC159DE6F000E025DB /* FreeVisualTimer.xcdatamodeld */; };
+		821CE4F1159DE6F000E025DB /* centroMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE4F0159DE6F000E025DB /* centroMainViewController.m */; };
+		821CE4F4159DE6F000E025DB /* centroFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE4F3159DE6F000E025DB /* centroFlipsideViewController.m */; };
+		821CE4FC159DE6F000E025DB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4FB159DE6F000E025DB /* SenTestingKit.framework */; };
+		821CE4FD159DE6F000E025DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D5159DE6F000E025DB /* UIKit.framework */; };
+		821CE4FE159DE6F000E025DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D7159DE6F000E025DB /* Foundation.framework */; };
+		821CE4FF159DE6F000E025DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4DB159DE6F000E025DB /* CoreData.framework */; };
+		821CE507159DE6F000E025DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 821CE505159DE6F000E025DB /* InfoPlist.strings */; };
+		821CE50A159DE6F000E025DB /* FreeVisualTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE509159DE6F000E025DB /* FreeVisualTimerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		821CE500159DE6F000E025DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 821CE4C8159DE6F000E025DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 821CE4D0159DE6F000E025DB;
+			remoteInfo = FreeVisualTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		821CE4D1159DE6F000E025DB /* FreeVisualTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeVisualTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		821CE4D5159DE6F000E025DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		821CE4D7159DE6F000E025DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		821CE4D9159DE6F000E025DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		821CE4DB159DE6F000E025DB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		821CE4DF159DE6F000E025DB /* FreeVisualTimer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FreeVisualTimer-Info.plist"; sourceTree = "<group>"; };
+		821CE4E1159DE6F000E025DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		821CE4E3159DE6F000E025DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		821CE4E5159DE6F000E025DB /* FreeVisualTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FreeVisualTimer-Prefix.pch"; sourceTree = "<group>"; };
+		821CE4E6159DE6F000E025DB /* centroAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = centroAppDelegate.h; sourceTree = "<group>"; };
+		821CE4E7159DE6F000E025DB /* centroAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = centroAppDelegate.m; sourceTree = "<group>"; };
+		821CE4EA159DE6F000E025DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		821CE4ED159DE6F000E025DB /* FreeVisualTimer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FreeVisualTimer.xcdatamodel; sourceTree = "<group>"; };
+		821CE4EF159DE6F000E025DB /* centroMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = centroMainViewController.h; sourceTree = "<group>"; };
+		821CE4F0159DE6F000E025DB /* centroMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = centroMainViewController.m; sourceTree = "<group>"; };
+		821CE4F2159DE6F000E025DB /* centroFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = centroFlipsideViewController.h; sourceTree = "<group>"; };
+		821CE4F3159DE6F000E025DB /* centroFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = centroFlipsideViewController.m; sourceTree = "<group>"; };
+		821CE4FA159DE6F000E025DB /* FreeVisualTimerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeVisualTimerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		821CE4FB159DE6F000E025DB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		821CE504159DE6F000E025DB /* FreeVisualTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FreeVisualTimerTests-Info.plist"; sourceTree = "<group>"; };
+		821CE506159DE6F000E025DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		821CE508159DE6F000E025DB /* FreeVisualTimerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FreeVisualTimerTests.h; sourceTree = "<group>"; };
+		821CE509159DE6F000E025DB /* FreeVisualTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreeVisualTimerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		821CE4CE159DE6F000E025DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821CE4D6159DE6F000E025DB /* UIKit.framework in Frameworks */,
+				821CE4D8159DE6F000E025DB /* Foundation.framework in Frameworks */,
+				821CE4DA159DE6F000E025DB /* CoreGraphics.framework in Frameworks */,
+				821CE4DC159DE6F000E025DB /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		821CE4F6159DE6F000E025DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821CE4FC159DE6F000E025DB /* SenTestingKit.framework in Frameworks */,
+				821CE4FD159DE6F000E025DB /* UIKit.framework in Frameworks */,
+				821CE4FE159DE6F000E025DB /* Foundation.framework in Frameworks */,
+				821CE4FF159DE6F000E025DB /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		821CE4C6159DE6F000E025DB = {
+			isa = PBXGroup;
+			children = (
+				821CE4DD159DE6F000E025DB /* FreeVisualTimer */,
+				821CE502159DE6F000E025DB /* FreeVisualTimerTests */,
+				821CE4D4159DE6F000E025DB /* Frameworks */,
+				821CE4D2159DE6F000E025DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		821CE4D2159DE6F000E025DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				821CE4D1159DE6F000E025DB /* FreeVisualTimer.app */,
+				821CE4FA159DE6F000E025DB /* FreeVisualTimerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		821CE4D4159DE6F000E025DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				821CE4D5159DE6F000E025DB /* UIKit.framework */,
+				821CE4D7159DE6F000E025DB /* Foundation.framework */,
+				821CE4D9159DE6F000E025DB /* CoreGraphics.framework */,
+				821CE4DB159DE6F000E025DB /* CoreData.framework */,
+				821CE4FB159DE6F000E025DB /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		821CE4DD159DE6F000E025DB /* FreeVisualTimer */ = {
+			isa = PBXGroup;
+			children = (
+				821CE4E6159DE6F000E025DB /* centroAppDelegate.h */,
+				821CE4E7159DE6F000E025DB /* centroAppDelegate.m */,
+				821CE4E9159DE6F000E025DB /* MainStoryboard.storyboard */,
+				821CE4EF159DE6F000E025DB /* centroMainViewController.h */,
+				821CE4F0159DE6F000E025DB /* centroMainViewController.m */,
+				821CE4F2159DE6F000E025DB /* centroFlipsideViewController.h */,
+				821CE4F3159DE6F000E025DB /* centroFlipsideViewController.m */,
+				821CE4EC159DE6F000E025DB /* FreeVisualTimer.xcdatamodeld */,
+				821CE4DE159DE6F000E025DB /* Supporting Files */,
+			);
+			path = FreeVisualTimer;
+			sourceTree = "<group>";
+		};
+		821CE4DE159DE6F000E025DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				821CE4DF159DE6F000E025DB /* FreeVisualTimer-Info.plist */,
+				821CE4E0159DE6F000E025DB /* InfoPlist.strings */,
+				821CE4E3159DE6F000E025DB /* main.m */,
+				821CE4E5159DE6F000E025DB /* FreeVisualTimer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		821CE502159DE6F000E025DB /* FreeVisualTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				821CE508159DE6F000E025DB /* FreeVisualTimerTests.h */,
+				821CE509159DE6F000E025DB /* FreeVisualTimerTests.m */,
+				821CE503159DE6F000E025DB /* Supporting Files */,
+			);
+			path = FreeVisualTimerTests;
+			sourceTree = "<group>";
+		};
+		821CE503159DE6F000E025DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				821CE504159DE6F000E025DB /* FreeVisualTimerTests-Info.plist */,
+				821CE505159DE6F000E025DB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		821CE4D0159DE6F000E025DB /* FreeVisualTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 821CE50D159DE6F000E025DB /* Build configuration list for PBXNativeTarget "FreeVisualTimer" */;
+			buildPhases = (
+				821CE4CD159DE6F000E025DB /* Sources */,
+				821CE4CE159DE6F000E025DB /* Frameworks */,
+				821CE4CF159DE6F000E025DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FreeVisualTimer;
+			productName = FreeVisualTimer;
+			productReference = 821CE4D1159DE6F000E025DB /* FreeVisualTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		821CE4F9159DE6F000E025DB /* FreeVisualTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 821CE510159DE6F000E025DB /* Build configuration list for PBXNativeTarget "FreeVisualTimerTests" */;
+			buildPhases = (
+				821CE4F5159DE6F000E025DB /* Sources */,
+				821CE4F6159DE6F000E025DB /* Frameworks */,
+				821CE4F7159DE6F000E025DB /* Resources */,
+				821CE4F8159DE6F000E025DB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				821CE501159DE6F000E025DB /* PBXTargetDependency */,
+			);
+			name = FreeVisualTimerTests;
+			productName = FreeVisualTimerTests;
+			productReference = 821CE4FA159DE6F000E025DB /* FreeVisualTimerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		821CE4C8159DE6F000E025DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = centro;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = none;
+			};
+			buildConfigurationList = 821CE4CB159DE6F000E025DB /* Build configuration list for PBXProject "FreeVisualTimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 821CE4C6159DE6F000E025DB;
+			productRefGroup = 821CE4D2159DE6F000E025DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				821CE4D0159DE6F000E025DB /* FreeVisualTimer */,
+				821CE4F9159DE6F000E025DB /* FreeVisualTimerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		821CE4CF159DE6F000E025DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821CE4E2159DE6F000E025DB /* InfoPlist.strings in Resources */,
+				821CE4EB159DE6F000E025DB /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		821CE4F7159DE6F000E025DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821CE507159DE6F000E025DB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		821CE4F8159DE6F000E025DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		821CE4CD159DE6F000E025DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821CE4E4159DE6F000E025DB /* main.m in Sources */,
+				821CE4E8159DE6F000E025DB /* centroAppDelegate.m in Sources */,
+				821CE4EE159DE6F000E025DB /* FreeVisualTimer.xcdatamodeld in Sources */,
+				821CE4F1159DE6F000E025DB /* centroMainViewController.m in Sources */,
+				821CE4F4159DE6F000E025DB /* centroFlipsideViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		821CE4F5159DE6F000E025DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821CE50A159DE6F000E025DB /* FreeVisualTimerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		821CE501159DE6F000E025DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 821CE4D0159DE6F000E025DB /* FreeVisualTimer */;
+			targetProxy = 821CE500159DE6F000E025DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		821CE4E0159DE6F000E025DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				821CE4E1159DE6F000E025DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		821CE4E9159DE6F000E025DB /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				821CE4EA159DE6F000E025DB /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		821CE505159DE6F000E025DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				821CE506159DE6F000E025DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		821CE50B159DE6F000E025DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		821CE50C159DE6F000E025DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		821CE50E159DE6F000E025DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreeVisualTimer/FreeVisualTimer-Prefix.pch";
+				INFOPLIST_FILE = "FreeVisualTimer/FreeVisualTimer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		821CE50F159DE6F000E025DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreeVisualTimer/FreeVisualTimer-Prefix.pch";
+				INFOPLIST_FILE = "FreeVisualTimer/FreeVisualTimer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		821CE511159DE6F000E025DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FreeVisualTimer.app/FreeVisualTimer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreeVisualTimer/FreeVisualTimer-Prefix.pch";
+				INFOPLIST_FILE = "FreeVisualTimerTests/FreeVisualTimerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		821CE512159DE6F000E025DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FreeVisualTimer.app/FreeVisualTimer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FreeVisualTimer/FreeVisualTimer-Prefix.pch";
+				INFOPLIST_FILE = "FreeVisualTimerTests/FreeVisualTimerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		821CE4CB159DE6F000E025DB /* Build configuration list for PBXProject "FreeVisualTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				821CE50B159DE6F000E025DB /* Debug */,
+				821CE50C159DE6F000E025DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		821CE50D159DE6F000E025DB /* Build configuration list for PBXNativeTarget "FreeVisualTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				821CE50E159DE6F000E025DB /* Debug */,
+				821CE50F159DE6F000E025DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		821CE510159DE6F000E025DB /* Build configuration list for PBXNativeTarget "FreeVisualTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				821CE511159DE6F000E025DB /* Debug */,
+				821CE512159DE6F000E025DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		821CE4EC159DE6F000E025DB /* FreeVisualTimer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				821CE4ED159DE6F000E025DB /* FreeVisualTimer.xcdatamodel */,
+			);
+			currentVersion = 821CE4ED159DE6F000E025DB /* FreeVisualTimer.xcdatamodel */;
+			path = FreeVisualTimer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 821CE4C8159DE6F000E025DB /* Project object */;
+}
