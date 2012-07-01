@@ -1,5 +1,7 @@
 class CentroMainViewController < UIViewController
   attr_accessor :flipsidePopoverController
+  attr_accessor :duration
+  attr_accessor :timerPieChartView
 
   def flipsideViewControllerDidFinish(controller)
     self.flipsidePopoverController.dismissPopoverAnimated(true)
@@ -13,9 +15,8 @@ class CentroMainViewController < UIViewController
   def prepareForSegue(segue, sender:sender)
     super
     if segue.identifier == "showAlternate"
+      segue.destinationViewController.delegate = self
       popoverController = segue.popoverController
-      puts popoverController.inspect
-      puts popoverController.class.inspect
       popoverController.delegate = self
       self.flipsidePopoverController = popoverController
     end
@@ -26,8 +27,20 @@ class CentroMainViewController < UIViewController
       self.flipsidePopoverController.dismissPopoverAnimated(true)
       self.flipsidePopoverController = nil
     else
-      self.performSegueWithIdentifier("showAlternate", sender:sender);
+      self.performSegueWithIdentifier("showAlternate", sender:sender)
     end
+  end
+
+  def viewDidLoad
+    super
+    view.addSubview( timerPieChartView )
+  end
+
+  def viewDidUnload
+    self.timerPieChartView = nil
+  end
+
+  def hello
   end
 
 end

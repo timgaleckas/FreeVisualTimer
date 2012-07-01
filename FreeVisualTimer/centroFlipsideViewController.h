@@ -8,16 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@class centroFlipsideViewController;
+@class CentroFlipsideViewController;
 
-@protocol centroFlipsideViewControllerDelegate
-- (void)flipsideViewControllerDidFinish:(centroFlipsideViewController *)controller;
+@protocol CentroFlipsideViewControllerDelegate
+- (void)flipsideViewControllerDidFinish:(CentroFlipsideViewController *)controller;
 @end
 
-@interface centroFlipsideViewController : UIViewController
+@interface CentroFlipsideViewController : UIViewController
 
-@property (weak, nonatomic) id <centroFlipsideViewControllerDelegate> delegate;
+@property (weak, nonatomic) id <CentroFlipsideViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIDatePicker *countdownPickerView;
 
 - (IBAction)done:(id)sender;
+- (IBAction)timerValueDidChange:(id)sender;
 
 @end

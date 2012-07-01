@@ -16,6 +16,7 @@
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize flipsidePopoverController = _flipsidePopoverController;
+@synthesize timerGLView = _timerGLView;
 
 - (void)viewDidLoad
 {
@@ -25,6 +26,7 @@
 
 - (void)viewDidUnload
 {
+    [self setTimerGLView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -36,7 +38,7 @@
 
 #pragma mark - Flipside View Controller
 
-- (void)flipsideViewControllerDidFinish:(centroFlipsideViewController *)controller
+- (void)flipsideViewControllerDidFinish:(CentroFlipsideViewController *)controller
 {
     [self.flipsidePopoverController dismissPopoverAnimated:YES];
     self.flipsidePopoverController = nil;

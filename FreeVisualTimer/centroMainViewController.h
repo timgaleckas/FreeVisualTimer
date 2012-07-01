@@ -8,10 +8,13 @@
 
 #import "CentroFlipsideViewController.h"
 
-@interface CentroMainViewController : UIViewController <centroFlipsideViewControllerDelegate, UIPopoverControllerDelegate>
+@interface CentroMainViewController : UIViewController <CentroFlipsideViewControllerDelegate, UIPopoverControllerDelegate,
+    GLKViewDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
+
+@property (weak, nonatomic) IBOutlet GLKView *timerGLView;
 
 @end

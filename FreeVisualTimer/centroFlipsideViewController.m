@@ -8,13 +8,14 @@
 
 #import "CentroFlipsideViewController.h"
 
-@interface centroFlipsideViewController ()
+@interface CentroFlipsideViewController ()
 
 @end
 
-@implementation centroFlipsideViewController
+@implementation CentroFlipsideViewController
 
 @synthesize delegate = _delegate;
+@synthesize countdownPickerView = _countdownPickerView;
 
 - (void)awakeFromNib
 {
@@ -30,6 +31,7 @@
 
 - (void)viewDidUnload
 {
+    [self setCountdownPickerView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -44,6 +46,9 @@
 - (IBAction)done:(id)sender
 {
     [self.delegate flipsideViewControllerDidFinish:self];
+}
+
+- (IBAction)timerValueDidChange:(id)sender {
 }
 
 @end

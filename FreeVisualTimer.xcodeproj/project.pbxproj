@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		821CE4D6159DE6F000E025DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D5159DE6F000E025DB /* UIKit.framework */; };
+		821CE4D6159DE6F000E025DB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D5159DE6F000E025DB /* GLKit.framework */; };
 		821CE4D8159DE6F000E025DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D7159DE6F000E025DB /* Foundation.framework */; };
 		821CE4DA159DE6F000E025DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D9159DE6F000E025DB /* CoreGraphics.framework */; };
 		821CE4DC159DE6F000E025DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4DB159DE6F000E025DB /* CoreData.framework */; };
@@ -19,11 +19,15 @@
 		821CE4F1159DE6F000E025DB /* centroMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE4F0159DE6F000E025DB /* centroMainViewController.m */; };
 		821CE4F4159DE6F000E025DB /* centroFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE4F3159DE6F000E025DB /* centroFlipsideViewController.m */; };
 		821CE4FC159DE6F000E025DB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4FB159DE6F000E025DB /* SenTestingKit.framework */; };
-		821CE4FD159DE6F000E025DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D5159DE6F000E025DB /* UIKit.framework */; };
+		821CE4FD159DE6F000E025DB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D5159DE6F000E025DB /* GLKit.framework */; };
 		821CE4FE159DE6F000E025DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D7159DE6F000E025DB /* Foundation.framework */; };
 		821CE4FF159DE6F000E025DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4DB159DE6F000E025DB /* CoreData.framework */; };
 		821CE507159DE6F000E025DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 821CE505159DE6F000E025DB /* InfoPlist.strings */; };
 		821CE50A159DE6F000E025DB /* FreeVisualTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE509159DE6F000E025DB /* FreeVisualTimerTests.m */; };
+		82900B5C159EB87A00BD3FB0 /* GLKTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82900B5B159EB87A00BD3FB0 /* GLKTimerViewController.m */; };
+		82900B5F159EBBBD00BD3FB0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82900B5E159EBBBD00BD3FB0 /* OpenGLES.framework */; };
+		82900B61159EBBFD00BD3FB0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82900B60159EBBFD00BD3FB0 /* QuartzCore.framework */; };
+		82A6CC1B159F4EC400E9CB56 /* PieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A6CC1A159F4EC400E9CB56 /* PieChartView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,7 @@
 
 /* Begin PBXFileReference section */
 		821CE4D1159DE6F000E025DB /* FreeVisualTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeVisualTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		821CE4D5159DE6F000E025DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		821CE4D5159DE6F000E025DB /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		821CE4D7159DE6F000E025DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		821CE4D9159DE6F000E025DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		821CE4DB159DE6F000E025DB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -60,6 +64,12 @@
 		821CE506159DE6F000E025DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		821CE508159DE6F000E025DB /* FreeVisualTimerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FreeVisualTimerTests.h; sourceTree = "<group>"; };
 		821CE509159DE6F000E025DB /* FreeVisualTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreeVisualTimerTests.m; sourceTree = "<group>"; };
+		82900B5A159EB87A00BD3FB0 /* GLKTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKTimerViewController.h; sourceTree = "<group>"; };
+		82900B5B159EB87A00BD3FB0 /* GLKTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLKTimerViewController.m; sourceTree = "<group>"; };
+		82900B5E159EBBBD00BD3FB0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		82900B60159EBBFD00BD3FB0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		82A6CC19159F4EC400E9CB56 /* PieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PieChartView.h; path = app/PieChartView.h; sourceTree = SOURCE_ROOT; };
+		82A6CC1A159F4EC400E9CB56 /* PieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PieChartView.m; path = app/PieChartView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +77,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				821CE4D6159DE6F000E025DB /* UIKit.framework in Frameworks */,
+				821CE4D6159DE6F000E025DB /* GLKit.framework in Frameworks */,
 				821CE4D8159DE6F000E025DB /* Foundation.framework in Frameworks */,
 				821CE4DA159DE6F000E025DB /* CoreGraphics.framework in Frameworks */,
 				821CE4DC159DE6F000E025DB /* CoreData.framework in Frameworks */,
+				82900B5F159EBBBD00BD3FB0 /* OpenGLES.framework in Frameworks */,
+				82900B61159EBBFD00BD3FB0 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				821CE4FC159DE6F000E025DB /* SenTestingKit.framework in Frameworks */,
-				821CE4FD159DE6F000E025DB /* UIKit.framework in Frameworks */,
+				821CE4FD159DE6F000E025DB /* GLKit.framework in Frameworks */,
 				821CE4FE159DE6F000E025DB /* Foundation.framework in Frameworks */,
 				821CE4FF159DE6F000E025DB /* CoreData.framework in Frameworks */,
 			);
@@ -110,7 +122,9 @@
 		821CE4D4159DE6F000E025DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				821CE4D5159DE6F000E025DB /* UIKit.framework */,
+				82900B5E159EBBBD00BD3FB0 /* OpenGLES.framework */,
+				82900B60159EBBFD00BD3FB0 /* QuartzCore.framework */,
+				821CE4D5159DE6F000E025DB /* GLKit.framework */,
 				821CE4D7159DE6F000E025DB /* Foundation.framework */,
 				821CE4D9159DE6F000E025DB /* CoreGraphics.framework */,
 				821CE4DB159DE6F000E025DB /* CoreData.framework */,
@@ -122,6 +136,8 @@
 		821CE4DD159DE6F000E025DB /* FreeVisualTimer */ = {
 			isa = PBXGroup;
 			children = (
+				82A6CC19159F4EC400E9CB56 /* PieChartView.h */,
+				82A6CC1A159F4EC400E9CB56 /* PieChartView.m */,
 				821CE4E6159DE6F000E025DB /* centroAppDelegate.h */,
 				821CE4E7159DE6F000E025DB /* centroAppDelegate.m */,
 				821CE4E9159DE6F000E025DB /* MainStoryboard.storyboard */,
@@ -131,6 +147,8 @@
 				821CE4F3159DE6F000E025DB /* centroFlipsideViewController.m */,
 				821CE4EC159DE6F000E025DB /* FreeVisualTimer.xcdatamodeld */,
 				821CE4DE159DE6F000E025DB /* Supporting Files */,
+				82900B5A159EB87A00BD3FB0 /* GLKTimerViewController.h */,
+				82900B5B159EB87A00BD3FB0 /* GLKTimerViewController.m */,
 			);
 			path = FreeVisualTimer;
 			sourceTree = "<group>";
@@ -278,6 +296,8 @@
 				821CE4EE159DE6F000E025DB /* FreeVisualTimer.xcdatamodeld in Sources */,
 				821CE4F1159DE6F000E025DB /* centroMainViewController.m in Sources */,
 				821CE4F4159DE6F000E025DB /* centroFlipsideViewController.m in Sources */,
+				82900B5C159EB87A00BD3FB0 /* GLKTimerViewController.m in Sources */,
+				82A6CC1B159F4EC400E9CB56 /* PieChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +469,7 @@
 				821CE50F159DE6F000E025DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		821CE510159DE6F000E025DB /* Build configuration list for PBXNativeTarget "FreeVisualTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +478,7 @@
 				821CE512159DE6F000E025DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

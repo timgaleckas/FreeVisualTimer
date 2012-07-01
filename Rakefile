@@ -7,4 +7,7 @@ Motion::Project::App.setup do |app|
   app.name = 'FreeVisualTimer'
   app.device_family = :ipad
   app.info_plist['UIMainStoryboardFile'] = 'MainStoryboard'
+  app.frameworks << 'OpenGLES'
+  app.frameworks << 'QuartzCore'
+  app.frameworks << 'GLKit'
 end
