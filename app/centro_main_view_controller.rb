@@ -2,7 +2,7 @@ class CentroMainViewController < UIViewController
   attr_accessor :flipsidePopoverController
   attr_accessor :duration
   attr_accessor :time_last_checked, :time_left, :started
-  attr_accessor :timerPieChartView, :onOffView
+  attr_accessor :timer_pie_chart_view, :onOffView
 
   def flipsideViewControllerDidFinish(controller)
     self.flipsidePopoverController.dismissPopoverAnimated(true)
@@ -48,6 +48,12 @@ class CentroMainViewController < UIViewController
     end
   end
 
+  def viewDidUnload
+    @timer.invalidate
+    @timer = nil
+    self.timer_pie_chart_view = nil
+  end
+
   def load_caf(name)
     path = NSBundle.mainBundle.pathForResource(name, ofType:'caf')
     url = NSURL.fileURLWithPath(path)
@@ -57,20 +63,13 @@ class CentroMainViewController < UIViewController
     sound
   end
 
-
-  def viewDidUnload
-    @timer.invalidate
-    @timer = nil
-    self.timerPieChartView = nil
-  end
-
   def update_pie_view
-    return unless self.timerPieChartView
+    return unless self.timer_pie_chart_view
     update_time_left
-    self.timerPieChartView.pie_items[0] ||= PieChartItem.new(1,white)
-    self.timerPieChartView.pie_items[1] ||= PieChartItem.new(1,red)
-    self.timerPieChartView.pie_items[0].value = self.duration - self.time_left
-    self.timerPieChartView.pie_items[1].value = self.time_left
+    self.timer_pie_chart_view.pie_items[0] ||= PieChartItem.new(1,white)
+    self.timer_pie_chart_view.pie_items[1] ||= PieChartItem.new(1,red)
+    self.timer_pie_chart_view.pie_items[0].value = self.duration - self.time_left
+    self.timer_pie_chart_view.pie_items[1].value = self.time_left
     if self.started
       @ticking_sound.play if @ticking_sound.currentTime = 0.0
       if time_left < 0.01
@@ -78,7 +77,7 @@ class CentroMainViewController < UIViewController
         self.started = false
       end
     end
-    self.timerPieChartView.setNeedsDisplay
+    self.timer_pie_chart_view.setNeedsDisplay
   end
 
   def white; PieChartItemColor.new(1.0, 1.0, 1.0, 1.0); end
@@ -101,12 +100,16 @@ class CentroMainViewController < UIViewController
     @alarm_sound.play
   end
 
-  def timerPieChartView
+  def timer_pie_chart_view
     @pie_chart_view ||= view.subviews.detect{|v|v.is_a? PieChartView}
   end
 
-  def onOffView
-    @on_off_view ||= view.subviews.detect{|v|v.is_a? UISegmentedControl}
+  def button_views
+    @button_views ||= view.subviews.select{|v|v.is_a? UIRoundedRectButton}
+  end
+
+  def start_stop_button_view
+    @start_stop_button_view ||= button_views[0]
   end
 
   def start_stop_tapped(id)
@@ -116,10 +119,12 @@ class CentroMainViewController < UIViewController
       @ticking_sound.stop
       @timer.invalidate
       @timer = nil
+      start_stop_button_view.setTitle('Start',forState:0)
     else
       @timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target:self, selector:'update_pie_view', userInfo:nil, repeats:true)
       self.started = true
       self.time_last_checked = Time.now
+      start_stop_button_view.setTitle('Stop',forState:0)
     end
   end
 
