@@ -10,4 +10,5 @@ Motion::Project::App.setup do |app|
   app.frameworks << 'OpenGLES'
   app.frameworks << 'QuartzCore'
   app.frameworks << 'GLKit'
+  app.frameworks << 'AVFoundation'
 end

@@ -7,14 +7,16 @@
 //
 
 #import "CentroFlipsideViewController.h"
+#import "PieChartView.h"
 
-@interface CentroMainViewController : UIViewController <CentroFlipsideViewControllerDelegate, UIPopoverControllerDelegate,
-    GLKViewDelegate>
+@interface CentroMainViewController : UIViewController <CentroFlipsideViewControllerDelegate, UIPopoverControllerDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
 
-@property (weak, nonatomic) IBOutlet GLKView *timerGLView;
+@property (weak, nonatomic) IBOutlet PieChartView *timerPieChartView;
+- (IBAction)start_stop_tapped:(id)sender;
+- (IBAction)reset_tapped:(id)sender;
 
 @end

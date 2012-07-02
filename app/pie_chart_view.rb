@@ -49,13 +49,26 @@ class PieChartView < UIView
     self
   end
 
+  def center_x
+    @center_x ||= self.bounds.size.width/2
+  end
+
+  def center_y
+    @center_y ||= self.bounds.size.height/2
+  end
+
+  def radius
+    @radius ||= (((self.bounds.size.width > self.bounds.size.height) ? self.bounds.size.height : self.bounds.size.width)/2 * 0.8).to_i
+  end
+
+
   def drawRect(rect)
     startDeg = 0.0
     endDeg = 0.0
 
-    x = self.bounds.size.width/2
-    y = self.bounds.size.height/2
-    r = (((self.bounds.size.width > self.bounds.size.height) ? self.bounds.size.height : self.bounds.size.width)/2 * 0.8).to_i
+    x = center_x
+    y = center_y
+    r = radius
 
     ctx = UIGraphicsGetCurrentContext()
     CGContextSetRGBStrokeColor(ctx, 0.0, 0.0, 0.0, 0.4)
@@ -69,10 +82,12 @@ class PieChartView < UIView
     # Loop through all the values and draw the graph
     startDeg = 0.0
 
+    total = pie_items.inject(0){|sum,i|sum+i.value}
+
     self.pie_items.each_with_index do |item, idx|
       color = item.color
 
-      theta = 360.0 * (item.value.to_f/pie_items.inject(0){|sum,i|sum+i.value})
+      theta = 360.0 * (item.value.to_f/total)
 
       if theta > 0.0
         endDeg += theta
@@ -103,15 +118,30 @@ class PieChartView < UIView
       end
     end
 
-    # Now we want to create an overlay for the gradient to make it look *fancy*
+
+    # compositing the gradient onto the piechart
+    CGContextDrawImage(ctx, self.bounds, gradient_overlay)
+    UIGraphicsPopContext()
+
+    # Finally set shadows
+    self.layer.shadowRadius = 10.0
+    self.layer.shadowColor = UIColor.blackColor.CGColor
+    self.layer.shadowOpacity = 0.6
+    self.layer.shadowOffset = CGSizeMake(0.0, 5.0)
+  end
+
+  def gradient_overlay
+    @gradient_overlay ||= generate_gradient_overlay
+  end
+
+  def generate_gradient_overlay
     # We do this by:
     # (0) Create circle mask
     # (1) Creating a blanket gradient image the size of the piechart
     # (2) Masking the gradient image with a circle the same size as the piechart
-    # (3) compositing the gradient onto the piechart
 
     # (0)
-    mask_image = self.create_circle_mask_using_center_point_and_radius( CGPointMake(x, y), r)
+    mask_image = self.create_circle_mask_using_center_point_and_radius( CGPointMake(center_x, center_y), radius)
 
     # (1)
     gradient_image = self.create_gradient_image_using_rect( self.bounds )
@@ -119,14 +149,7 @@ class PieChartView < UIView
     # (2)
     fade_image = self.mask_image( gradient_image, mask_image )
 
-    # (3)
-    CGContextDrawImage(ctx, self.bounds, fade_image.CGImage)
-
-    # Finally set shadows
-    self.layer.shadowRadius = 10.0
-    self.layer.shadowColor = UIColor.blackColor.CGColor
-    self.layer.shadowOpacity = 0.6
-    self.layer.shadowOffset = CGSizeMake(0.0, 5.0)
+    fade_image.CGImage
   end
 
   def mask_image(image, mask_image)

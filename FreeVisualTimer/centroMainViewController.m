@@ -16,7 +16,7 @@
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize flipsidePopoverController = _flipsidePopoverController;
-@synthesize timerGLView = _timerGLView;
+@synthesize timerPieChartView = _timerPieChartView;
 
 - (void)viewDidLoad
 {
@@ -26,7 +26,7 @@
 
 - (void)viewDidUnload
 {
-    [self setTimerGLView:nil];
+    [self setTimerPieChartView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -69,4 +69,11 @@
     }
 }
 
+- (IBAction)onOffDidChange:(id)sender {
+}
+- (IBAction)start_stop_tapped:(id)sender {
+}
+
+- (IBAction)reset_tapped:(id)sender {
+}
 @end

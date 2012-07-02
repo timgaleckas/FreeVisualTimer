@@ -24,10 +24,15 @@
 		821CE4FF159DE6F000E025DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4DB159DE6F000E025DB /* CoreData.framework */; };
 		821CE507159DE6F000E025DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 821CE505159DE6F000E025DB /* InfoPlist.strings */; };
 		821CE50A159DE6F000E025DB /* FreeVisualTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE509159DE6F000E025DB /* FreeVisualTimerTests.m */; };
+		825FF26B15A1BF7C00D8EEAE /* alarm-clock-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26515A1BF7C00D8EEAE /* alarm-clock-1.mp3 */; };
+		825FF26C15A1BF7C00D8EEAE /* clock-ticking-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26615A1BF7C00D8EEAE /* clock-ticking-1.mp3 */; };
+		825FF26D15A1BF7C00D8EEAE /* clock-ticking-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26715A1BF7C00D8EEAE /* clock-ticking-2.mp3 */; };
+		825FF26E15A1BF7C00D8EEAE /* clock-winding-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26815A1BF7C00D8EEAE /* clock-winding-1.mp3 */; };
+		825FF26F15A1BF7C00D8EEAE /* crank-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26915A1BF7C00D8EEAE /* crank-1.mp3 */; };
+		825FF27015A1BF7C00D8EEAE /* crank-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26A15A1BF7C00D8EEAE /* crank-2.mp3 */; };
 		82900B5C159EB87A00BD3FB0 /* GLKTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82900B5B159EB87A00BD3FB0 /* GLKTimerViewController.m */; };
 		82900B5F159EBBBD00BD3FB0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82900B5E159EBBBD00BD3FB0 /* OpenGLES.framework */; };
 		82900B61159EBBFD00BD3FB0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82900B60159EBBFD00BD3FB0 /* QuartzCore.framework */; };
-		82A6CC1B159F4EC400E9CB56 /* PieChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82A6CC1A159F4EC400E9CB56 /* PieChartView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,12 +69,17 @@
 		821CE506159DE6F000E025DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		821CE508159DE6F000E025DB /* FreeVisualTimerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FreeVisualTimerTests.h; sourceTree = "<group>"; };
 		821CE509159DE6F000E025DB /* FreeVisualTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreeVisualTimerTests.m; sourceTree = "<group>"; };
+		825FF26515A1BF7C00D8EEAE /* alarm-clock-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "alarm-clock-1.mp3"; sourceTree = "<group>"; };
+		825FF26615A1BF7C00D8EEAE /* clock-ticking-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "clock-ticking-1.mp3"; sourceTree = "<group>"; };
+		825FF26715A1BF7C00D8EEAE /* clock-ticking-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "clock-ticking-2.mp3"; sourceTree = "<group>"; };
+		825FF26815A1BF7C00D8EEAE /* clock-winding-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "clock-winding-1.mp3"; sourceTree = "<group>"; };
+		825FF26915A1BF7C00D8EEAE /* crank-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "crank-1.mp3"; sourceTree = "<group>"; };
+		825FF26A15A1BF7C00D8EEAE /* crank-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "crank-2.mp3"; sourceTree = "<group>"; };
 		82900B5A159EB87A00BD3FB0 /* GLKTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKTimerViewController.h; sourceTree = "<group>"; };
 		82900B5B159EB87A00BD3FB0 /* GLKTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLKTimerViewController.m; sourceTree = "<group>"; };
 		82900B5E159EBBBD00BD3FB0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		82900B60159EBBFD00BD3FB0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		82A6CC19159F4EC400E9CB56 /* PieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PieChartView.h; path = app/PieChartView.h; sourceTree = SOURCE_ROOT; };
-		82A6CC1A159F4EC400E9CB56 /* PieChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PieChartView.m; path = app/PieChartView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,8 +146,8 @@
 		821CE4DD159DE6F000E025DB /* FreeVisualTimer */ = {
 			isa = PBXGroup;
 			children = (
+				825FF26415A1BF7C00D8EEAE /* sounds */,
 				82A6CC19159F4EC400E9CB56 /* PieChartView.h */,
-				82A6CC1A159F4EC400E9CB56 /* PieChartView.m */,
 				821CE4E6159DE6F000E025DB /* centroAppDelegate.h */,
 				821CE4E7159DE6F000E025DB /* centroAppDelegate.m */,
 				821CE4E9159DE6F000E025DB /* MainStoryboard.storyboard */,
@@ -182,6 +192,19 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		825FF26415A1BF7C00D8EEAE /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				825FF26515A1BF7C00D8EEAE /* alarm-clock-1.mp3 */,
+				825FF26615A1BF7C00D8EEAE /* clock-ticking-1.mp3 */,
+				825FF26715A1BF7C00D8EEAE /* clock-ticking-2.mp3 */,
+				825FF26815A1BF7C00D8EEAE /* clock-winding-1.mp3 */,
+				825FF26915A1BF7C00D8EEAE /* crank-1.mp3 */,
+				825FF26A15A1BF7C00D8EEAE /* crank-2.mp3 */,
+			);
+			path = sounds;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -257,6 +280,12 @@
 			files = (
 				821CE4E2159DE6F000E025DB /* InfoPlist.strings in Resources */,
 				821CE4EB159DE6F000E025DB /* MainStoryboard.storyboard in Resources */,
+				825FF26B15A1BF7C00D8EEAE /* alarm-clock-1.mp3 in Resources */,
+				825FF26C15A1BF7C00D8EEAE /* clock-ticking-1.mp3 in Resources */,
+				825FF26D15A1BF7C00D8EEAE /* clock-ticking-2.mp3 in Resources */,
+				825FF26E15A1BF7C00D8EEAE /* clock-winding-1.mp3 in Resources */,
+				825FF26F15A1BF7C00D8EEAE /* crank-1.mp3 in Resources */,
+				825FF27015A1BF7C00D8EEAE /* crank-2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +326,6 @@
 				821CE4F1159DE6F000E025DB /* centroMainViewController.m in Sources */,
 				821CE4F4159DE6F000E025DB /* centroFlipsideViewController.m in Sources */,
 				82900B5C159EB87A00BD3FB0 /* GLKTimerViewController.m in Sources */,
-				82A6CC1B159F4EC400E9CB56 /* PieChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
