@@ -2,7 +2,8 @@ class CentroMainViewController < UIViewController
   attr_accessor :flipsidePopoverController
   attr_accessor :duration
   attr_accessor :time_last_checked, :time_left, :started
-  attr_accessor :timer_pie_chart_view, :onOffView
+  attr_accessor :timerPieChartView #wish this would work
+
 
   def flipsideViewControllerDidFinish(controller)
     self.flipsidePopoverController.dismissPopoverAnimated(true)
