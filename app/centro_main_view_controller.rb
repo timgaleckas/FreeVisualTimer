@@ -43,7 +43,7 @@ class CentroMainViewController < UIViewController
     @ticking_sound ||= load_caf('clock-ticking-1')
     @crank_sound ||= load_caf('crank-2')
     if self.started
-      @timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector:'update_pie_view', userInfo:nil, repeats:true)
+      @timer = NSTimer.scheduledTimerWithTimeInterval(0.03, target:self, selector:'update_pie_view', userInfo:nil, repeats:true)
     else
       update_pie_view
     end
@@ -122,7 +122,7 @@ class CentroMainViewController < UIViewController
       @timer = nil
       start_stop_button_view.setTitle('Start',forState:0)
     else
-      @timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target:self, selector:'update_pie_view', userInfo:nil, repeats:true)
+      @timer = NSTimer.scheduledTimerWithTimeInterval(0.03, target:self, selector:'update_pie_view', userInfo:nil, repeats:true)
       self.started = true
       self.time_last_checked = Time.now
       start_stop_button_view.setTitle('Stop',forState:0)

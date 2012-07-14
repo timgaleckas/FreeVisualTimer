@@ -20,7 +20,7 @@ class PieChartItem
 end
 
 class PieChartView < UIView
-  attr_accessor :no_data_fill_color, :gradient_fill_color, :gradient_fill_start, :gradient_fill_end
+  attr_accessor :no_data_fill_color
   def pie_items
     @pie_items ||= []
   end
@@ -29,9 +29,6 @@ class PieChartView < UIView
   end
 
   def init_defaults
-    self.gradient_fill_color ||= PieChartItemColor.new(0.0, 0.0, 0.0, 0.4)
-    self.gradient_fill_start ||= 0.3
-    self.gradient_fill_end   ||= 1.0
     self.no_data_fill_color  ||= PieChartItemColor.new(0.0, 0.0, 0.0, 0.4)
     self.backgroundColor     ||= UIColor.clearColor
   end
@@ -61,8 +58,9 @@ class PieChartView < UIView
     @radius ||= (((self.bounds.size.width > self.bounds.size.height) ? self.bounds.size.height : self.bounds.size.width)/2 * 0.8).to_i
   end
 
-
   def drawRect(rect)
+    ctx = UIGraphicsGetCurrentContext()
+
     startDeg = 0.0
     endDeg = 0.0
 
@@ -70,7 +68,6 @@ class PieChartView < UIView
     y = center_y
     r = radius
 
-    ctx = UIGraphicsGetCurrentContext()
     CGContextSetRGBStrokeColor(ctx, 0.0, 0.0, 0.0, 0.4)
     CGContextSetLineWidth(ctx, 1.0)
 
@@ -118,9 +115,6 @@ class PieChartView < UIView
       end
     end
 
-
-    # compositing the gradient onto the piechart
-    CGContextDrawImage(ctx, self.bounds, gradient_overlay)
     UIGraphicsPopContext()
 
     # Finally set shadows
@@ -128,28 +122,6 @@ class PieChartView < UIView
     self.layer.shadowColor = UIColor.blackColor.CGColor
     self.layer.shadowOpacity = 0.6
     self.layer.shadowOffset = CGSizeMake(0.0, 5.0)
-  end
-
-  def gradient_overlay
-    @gradient_overlay ||= generate_gradient_overlay
-  end
-
-  def generate_gradient_overlay
-    # We do this by:
-    # (0) Create circle mask
-    # (1) Creating a blanket gradient image the size of the piechart
-    # (2) Masking the gradient image with a circle the same size as the piechart
-
-    # (0)
-    mask_image = self.create_circle_mask_using_center_point_and_radius( CGPointMake(center_x, center_y), radius)
-
-    # (1)
-    gradient_image = self.create_gradient_image_using_rect( self.bounds )
-
-    # (2)
-    fade_image = self.mask_image( gradient_image, mask_image )
-
-    fade_image.CGImage
   end
 
   def mask_image(image, mask_image)
@@ -178,41 +150,5 @@ class PieChartView < UIView
     mask_image = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsPopContext()
     mask_image
-  end
-  def create_gradient_image_using_rect(rect)
-    UIGraphicsBeginImageContext( rect.size )
-    ctx3 = UIGraphicsGetCurrentContext()
-
-    locations  = [
-                   1.0 - gradient_fill_start,
-                   1.0 - gradient_fill_end
-                 ]
-    locations_p = Pointer.new(:float, 2)
-    locations.each_with_index{|i,idx|locations_p[idx]=i}
-    components = [
-                   0.0,
-                   0.0,
-                   0.0,
-                   0.0,
-                   gradient_fill_color.red,
-                   gradient_fill_color.green,
-                   gradient_fill_color.blue,
-                   gradient_fill_color.alpha
-                 ]
-    components_p = Pointer.new(:float, 8)
-    components.each_with_index{|i,idx|components_p[idx]=i}
-
-    rgb_colorspace = CGColorSpaceCreateDeviceRGB()
-    gradient = CGGradientCreateWithColorComponents(rgb_colorspace, components_p, locations_p, locations.size)
-
-    current_bounds = rect
-    top_center_point = CGPointMake(CGRectGetMidX(current_bounds), CGRectGetMinY(current_bounds))
-    bottom_center_point = CGPointMake(CGRectGetMidX(current_bounds), CGRectGetMaxY(current_bounds))
-    CGContextDrawLinearGradient(ctx3, gradient, top_center_point, bottom_center_point, 0)
-
-    gradient_image = UIGraphicsGetImageFromCurrentImageContext()
-    UIGraphicsPopContext()
-
-    gradient_image
   end
 end
