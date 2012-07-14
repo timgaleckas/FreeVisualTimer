@@ -124,6 +124,52 @@ class PieChartView < UIView
     self.layer.shadowOffset = CGSizeMake(0.0, 5.0)
   end
 
+  #def ccDrawFilledCircle( CGPoint center, float r, float a, float d, NSUInteger totalSegs)
+  def ccDrawFilledCircle( center, r, a, d, totalSegs)
+    int additionalSegment = 2
+
+    const float coef = 2.0 * M_PI/totalSegs
+
+    NSUInteger segs = d / coef
+    segs += 1 #Rather draw over than not draw enough
+
+    return if d == 0
+
+    GLfloat *vertices = calloc( sizeof(GLfloat)*2*(segs+2), 1)
+    return if !vertices
+
+    while true do #for(NSUInteger i=0;i<=segs;i++) do
+        float rads = i*coef
+        GLfloat j = r * cosf(rads + a) + center.x
+        GLfloat k = r * sinf(rads + a) + center.y
+
+        #Leave first 2 spots for origin
+        vertices[2+ i*2] = j * CC_CONTENT_SCALE_FACTOR()
+        vertices[2+ i*2+1] =k * CC_CONTENT_SCALE_FACTOR()
+    end
+    #Put origin vertices into first 2 spots
+    vertices[0] = center.x * CC_CONTENT_SCALE_FACTOR()
+    vertices[1] = center.y * CC_CONTENT_SCALE_FACTOR()
+
+    # Default GL states: GL_TEXTURE_2D, GL_VERTEX_ARRAY, GL_COLOR_ARRAY, GL_TEXTURE_COORD_ARRAY
+    # Needed states: GL_VERTEX_ARRAY,
+    # Unneeded states: GL_TEXTURE_2D, GL_TEXTURE_COORD_ARRAY, GL_COLOR_ARRAY
+    glDisable(GL_TEXTURE_2D)
+    glDisableClientState(GL_TEXTURE_COORD_ARRAY)
+    glDisableClientState(GL_COLOR_ARRAY)
+
+    glVertexPointer(2, GL_FLOAT, 0, vertices)
+    #Change to fan
+    glDrawArrays(GL_TRIANGLE_FAN, 0, segs+additionalSegment)
+
+    # restore default state
+    glEnableClientState(GL_COLOR_ARRAY)
+    glEnableClientState(GL_TEXTURE_COORD_ARRAY)
+    glEnable(GL_TEXTURE_2D)
+
+    free( vertices )
+  end
+
   def mask_image(image, mask_image)
     maskRef = mask_image.CGImage
     mask = CGImageMaskCreate(CGImageGetWidth(maskRef),
