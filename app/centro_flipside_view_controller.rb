@@ -2,7 +2,7 @@ class CentroFlipsideViewController < UIViewController
   attr_accessor :delegate
 
   def loadView
-    self.view = NSBundle.mainBundle.loadNibNamed("FreeVisualTimer-iPad", owner:self, options:nil)[1]
+    self.view = AppDelegate.nib[1]
     self.view.subviews[0].subviews.last.when(UIControlEventTouchUpInside) do
       self.delegate.dismiss_popover
     end

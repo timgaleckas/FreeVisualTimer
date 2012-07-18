@@ -1,40 +1,58 @@
 class CentroMainViewController < UIViewController
   attr_accessor :flipsidePopoverController
-  attr_accessor :duration
-  attr_accessor :start_button, :reset_button, :settings_button
+  attr_reader   :duration
+  attr_accessor :start_button, :reset_button, :settings_button, :timer_pie_chart_view
   attr_accessor :time_last_checked, :time_left, :started
 
-  def loadView
-    @alarm_sound   ||= load_caf('alarm-clock-1')
+  def duration=(new_duration)
+    @duration=new_duration
+    update_pie_view
+    @duration
+  end
+
+  def ticking_sound
     @ticking_sound ||= load_caf('clock-ticking-1')
+  end
+
+  def crank_sound
     @crank_sound   ||= load_caf('crank-2')
+  end
+
+  def alarm_sound
+    @alarm_sound   ||= load_caf('alarm-clock-1')
+  end
+
+
+  def loadView
     self.duration  ||= 60
     self.started     = !!self.started
     self.time_left ||= self.duration
 
     self.navigationController.setNavigationBarHidden(true, animated:false)
-    self.view = NSBundle.mainBundle.loadNibNamed("FreeVisualTimer-iPad", owner:self, options:nil)[0]
+    self.view = AppDelegate.nib[0]
 
     self.settings_button = self.view.subviews[0].subviews.last
-    self.start_button, self.reset_button = view.subviews[-2,2]
+    self.timer_pie_chart_view, self.start_button, self.reset_button = view.subviews[-3,3]
 
     self.settings_button.when(UIControlEventTouchUpInside) do
       unless self.flipsidePopoverController
-        self.flipsidePopoverController = UIPopoverController.alloc.initWithContentViewController(CentroFlipsideViewController.alloc.init)
+        if Device.ipad?
+          self.flipsidePopoverController = UIPopoverController.alloc.initWithContentViewController(CentroFlipsideViewController.alloc.init)
+          self.flipsidePopoverController.setPopoverContentSize CGSizeMake(320, 640)
+          self.flipsidePopoverController.contentViewController.delegate = self
+          self.flipsidePopoverController.contentViewController.countdown_picker.countDownDuration = self.duration
+          self.flipsidePopoverController.presentPopoverFromRect(self.settings_button.frame, inView:self.view, permittedArrowDirections:0, animated:true)
+        else
+          self.flipsidePopoverController = CentroFlipsideViewController.alloc.init
+          self.navigationController.pushViewController(self.flipsidePopoverController, animated:true)
+          self.flipsidePopoverController.countdown_picker.countDownDuration = self.duration
+        end
         self.flipsidePopoverController.delegate = self
-        self.flipsidePopoverController.contentViewController.delegate = self
-        self.flipsidePopoverController.contentViewController.countdown_picker.countDownDuration = self.duration
-        self.flipsidePopoverController.presentPopoverFromRect(self.settings_button.frame, inView:self.view, permittedArrowDirections:0, animated:true)
       end
     end
     self.start_button.when(UIControlEventTouchUpInside) do
       if self.started
-        self.started = false
-        self.time_last_checked = nil
-        @ticking_sound.stop
-        @timer.invalidate
-        @timer = nil
-        self.start_button.setTitle('Start',forState:0)
+        self.stop!
       else
         @timer = NSTimer.scheduledTimerWithTimeInterval(0.03, target:self, selector:'update_pie_view', userInfo:nil, repeats:true)
         self.started = true
@@ -43,7 +61,10 @@ class CentroMainViewController < UIViewController
       end
     end
     self.reset_button.when(UIControlEventTouchUpInside) do
-      @crank_sound.play
+      if self.started
+        self.stop!
+      end
+      self.crank_sound.play
       self.time_last_checked = nil
       self.started = false
       self.time_left = self.duration
@@ -56,24 +77,33 @@ class CentroMainViewController < UIViewController
     end
   end
 
+  def stop!
+    self.started = false
+    self.time_last_checked = nil
+    self.ticking_sound.stop
+    @timer.invalidate
+    @timer = nil
+    self.start_button.setTitle('Start',forState:0)
+  end
+
+
   def duration_did_change(new_duration)
     self.duration = new_duration
-    update_pie_view
   end
 
   def dismiss_popover
     if self.flipsidePopoverController
-      self.flipsidePopoverController.dismissPopoverAnimated(true)
+      if Device.ipad?
+        self.flipsidePopoverController.dismissPopoverAnimated(true)
+      else
+        self.navigationController.popViewControllerAnimated true
+      end
       self.flipsidePopoverController = nil
     end
   end
 
   def popoverControllerDidDismissPopover( popoverController )
     self.flipsidePopoverController = nil
-  end
-
-  def timer_pie_chart_view
-    @pie_chart_view ||= view.subviews.detect{|v|v.is_a? PieChartView}
   end
 
   private
@@ -95,7 +125,7 @@ class CentroMainViewController < UIViewController
     self.timer_pie_chart_view.pie_items[0].value = self.duration - self.time_left
     self.timer_pie_chart_view.pie_items[1].value = self.time_left
     if self.started
-      @ticking_sound.play if @ticking_sound.currentTime = 0.0
+      self.ticking_sound.play if self.ticking_sound.currentTime = 0.0
       if time_left < 0.01
         alarm!
         self.started = false
@@ -120,8 +150,9 @@ class CentroMainViewController < UIViewController
   end
 
   def alarm!
-    @ticking_sound.stop
-    @alarm_sound.play
+    self.ticking_sound.stop
+    self.alarm_sound.play
+    App.alert("Time's up!")
   end
 
 end

@@ -22,12 +22,7 @@
 		821CE4FE159DE6F000E025DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D7159DE6F000E025DB /* Foundation.framework */; };
 		821CE4FF159DE6F000E025DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4DB159DE6F000E025DB /* CoreData.framework */; };
 		824AF44B15B652480072E88D /* FreeVisualTimer-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824AF44A15B652480072E88D /* FreeVisualTimer-iPad.xib */; };
-		825FF26B15A1BF7C00D8EEAE /* alarm-clock-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26515A1BF7C00D8EEAE /* alarm-clock-1.mp3 */; };
-		825FF26C15A1BF7C00D8EEAE /* clock-ticking-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26615A1BF7C00D8EEAE /* clock-ticking-1.mp3 */; };
-		825FF26D15A1BF7C00D8EEAE /* clock-ticking-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26715A1BF7C00D8EEAE /* clock-ticking-2.mp3 */; };
-		825FF26E15A1BF7C00D8EEAE /* clock-winding-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26815A1BF7C00D8EEAE /* clock-winding-1.mp3 */; };
-		825FF26F15A1BF7C00D8EEAE /* crank-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26915A1BF7C00D8EEAE /* crank-1.mp3 */; };
-		825FF27015A1BF7C00D8EEAE /* crank-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26A15A1BF7C00D8EEAE /* crank-2.mp3 */; };
+		824AF44D15B6550B0072E88D /* FreeVisualTimer-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824AF44C15B6550B0072E88D /* FreeVisualTimer-iPhone.xib */; };
 		82900B5F159EBBBD00BD3FB0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82900B5E159EBBBD00BD3FB0 /* OpenGLES.framework */; };
 		82900B61159EBBFD00BD3FB0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82900B60159EBBFD00BD3FB0 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -43,7 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		821CE4D1159DE6F000E025DB /* FreeVisualTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeVisualTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8212959715B6E07100B9FEFE /* FreeVisualTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeVisualTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8212959915B6E07100B9FEFE /* FreeVisualTimerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeVisualTimerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		821CE4D5159DE6F000E025DB /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		821CE4D7159DE6F000E025DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		821CE4D9159DE6F000E025DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,15 +55,9 @@
 		821CE4F0159DE6F000E025DB /* centroMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = centroMainViewController.m; sourceTree = "<group>"; };
 		821CE4F2159DE6F000E025DB /* centroFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = centroFlipsideViewController.h; sourceTree = "<group>"; };
 		821CE4F3159DE6F000E025DB /* centroFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = centroFlipsideViewController.m; sourceTree = "<group>"; };
-		821CE4FA159DE6F000E025DB /* FreeVisualTimerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeVisualTimerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		821CE4FB159DE6F000E025DB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		824AF44A15B652480072E88D /* FreeVisualTimer-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "FreeVisualTimer-iPad.xib"; path = "resources/FreeVisualTimer-iPad.xib"; sourceTree = SOURCE_ROOT; };
-		825FF26515A1BF7C00D8EEAE /* alarm-clock-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "alarm-clock-1.mp3"; sourceTree = "<group>"; };
-		825FF26615A1BF7C00D8EEAE /* clock-ticking-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "clock-ticking-1.mp3"; sourceTree = "<group>"; };
-		825FF26715A1BF7C00D8EEAE /* clock-ticking-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "clock-ticking-2.mp3"; sourceTree = "<group>"; };
-		825FF26815A1BF7C00D8EEAE /* clock-winding-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "clock-winding-1.mp3"; sourceTree = "<group>"; };
-		825FF26915A1BF7C00D8EEAE /* crank-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "crank-1.mp3"; sourceTree = "<group>"; };
-		825FF26A15A1BF7C00D8EEAE /* crank-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "crank-2.mp3"; sourceTree = "<group>"; };
+		824AF44C15B6550B0072E88D /* FreeVisualTimer-iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "FreeVisualTimer-iPhone.xib"; path = "resources/FreeVisualTimer-iPhone.xib"; sourceTree = SOURCE_ROOT; };
 		82900B5E159EBBBD00BD3FB0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		82900B60159EBBFD00BD3FB0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		82A6CC19159F4EC400E9CB56 /* PieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PieChartView.h; path = app/PieChartView.h; sourceTree = SOURCE_ROOT; };
@@ -106,17 +96,9 @@
 			children = (
 				821CE4DD159DE6F000E025DB /* FreeVisualTimer */,
 				821CE4D4159DE6F000E025DB /* Frameworks */,
-				821CE4D2159DE6F000E025DB /* Products */,
+				8212959715B6E07100B9FEFE /* FreeVisualTimer.app */,
+				8212959915B6E07100B9FEFE /* FreeVisualTimerTests.octest */,
 			);
-			sourceTree = "<group>";
-		};
-		821CE4D2159DE6F000E025DB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				821CE4D1159DE6F000E025DB /* FreeVisualTimer.app */,
-				821CE4FA159DE6F000E025DB /* FreeVisualTimerTests.octest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		821CE4D4159DE6F000E025DB /* Frameworks */ = {
@@ -136,16 +118,16 @@
 		821CE4DD159DE6F000E025DB /* FreeVisualTimer */ = {
 			isa = PBXGroup;
 			children = (
-				825FF26415A1BF7C00D8EEAE /* sounds */,
-				82A6CC19159F4EC400E9CB56 /* PieChartView.h */,
 				821CE4E6159DE6F000E025DB /* centroAppDelegate.h */,
 				821CE4E7159DE6F000E025DB /* centroAppDelegate.m */,
+				821CE4F2159DE6F000E025DB /* centroFlipsideViewController.h */,
+				821CE4F3159DE6F000E025DB /* centroFlipsideViewController.m */,
 				821CE4EF159DE6F000E025DB /* centroMainViewController.h */,
 				821CE4F0159DE6F000E025DB /* centroMainViewController.m */,
-				821CE4F2159DE6F000E025DB /* centroFlipsideViewController.h */,
 				824AF44A15B652480072E88D /* FreeVisualTimer-iPad.xib */,
-				821CE4F3159DE6F000E025DB /* centroFlipsideViewController.m */,
+				824AF44C15B6550B0072E88D /* FreeVisualTimer-iPhone.xib */,
 				821CE4EC159DE6F000E025DB /* FreeVisualTimer.xcdatamodeld */,
+				82A6CC19159F4EC400E9CB56 /* PieChartView.h */,
 				821CE4DE159DE6F000E025DB /* Supporting Files */,
 			);
 			path = FreeVisualTimer;
@@ -161,19 +143,6 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
-		};
-		825FF26415A1BF7C00D8EEAE /* sounds */ = {
-			isa = PBXGroup;
-			children = (
-				825FF26515A1BF7C00D8EEAE /* alarm-clock-1.mp3 */,
-				825FF26615A1BF7C00D8EEAE /* clock-ticking-1.mp3 */,
-				825FF26715A1BF7C00D8EEAE /* clock-ticking-2.mp3 */,
-				825FF26815A1BF7C00D8EEAE /* clock-winding-1.mp3 */,
-				825FF26915A1BF7C00D8EEAE /* crank-1.mp3 */,
-				825FF26A15A1BF7C00D8EEAE /* crank-2.mp3 */,
-			);
-			path = sounds;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -192,7 +161,7 @@
 			);
 			name = FreeVisualTimer;
 			productName = FreeVisualTimer;
-			productReference = 821CE4D1159DE6F000E025DB /* FreeVisualTimer.app */;
+			productReference = 8212959715B6E07100B9FEFE /* FreeVisualTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		821CE4F9159DE6F000E025DB /* FreeVisualTimerTests */ = {
@@ -211,7 +180,7 @@
 			);
 			name = FreeVisualTimerTests;
 			productName = FreeVisualTimerTests;
-			productReference = 821CE4FA159DE6F000E025DB /* FreeVisualTimerTests.octest */;
+			productReference = 8212959915B6E07100B9FEFE /* FreeVisualTimerTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -232,7 +201,7 @@
 				en,
 			);
 			mainGroup = 821CE4C6159DE6F000E025DB;
-			productRefGroup = 821CE4D2159DE6F000E025DB /* Products */;
+			productRefGroup = 821CE4C6159DE6F000E025DB;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -248,13 +217,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				821CE4E2159DE6F000E025DB /* InfoPlist.strings in Resources */,
-				825FF26B15A1BF7C00D8EEAE /* alarm-clock-1.mp3 in Resources */,
-				825FF26C15A1BF7C00D8EEAE /* clock-ticking-1.mp3 in Resources */,
-				825FF26D15A1BF7C00D8EEAE /* clock-ticking-2.mp3 in Resources */,
-				825FF26E15A1BF7C00D8EEAE /* clock-winding-1.mp3 in Resources */,
-				825FF26F15A1BF7C00D8EEAE /* crank-1.mp3 in Resources */,
-				825FF27015A1BF7C00D8EEAE /* crank-2.mp3 in Resources */,
 				824AF44B15B652480072E88D /* FreeVisualTimer-iPad.xib in Resources */,
+				824AF44D15B6550B0072E88D /* FreeVisualTimer-iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

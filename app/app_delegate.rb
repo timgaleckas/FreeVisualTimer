@@ -15,4 +15,8 @@ class AppDelegate
   def window
     @window
   end
+  def self.nib
+    Device.ipad? ? NSBundle.mainBundle.loadNibNamed("FreeVisualTimer-iPad", owner:self, options:nil) :
+                   NSBundle.mainBundle.loadNibNamed("FreeVisualTimer-iPhone", owner:self, options:nil)
+  end
 end
