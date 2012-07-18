@@ -19,7 +19,4 @@
 @property (weak, nonatomic) id <CentroFlipsideViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIDatePicker *countdownPickerView;
 
-- (IBAction)done:(id)sender;
-- (IBAction)timerValueDidChange:(id)sender;
-
 @end

@@ -14,7 +14,6 @@
 		821CE4E2159DE6F000E025DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 821CE4E0159DE6F000E025DB /* InfoPlist.strings */; };
 		821CE4E4159DE6F000E025DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE4E3159DE6F000E025DB /* main.m */; };
 		821CE4E8159DE6F000E025DB /* centroAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE4E7159DE6F000E025DB /* centroAppDelegate.m */; };
-		821CE4EB159DE6F000E025DB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821CE4E9159DE6F000E025DB /* MainStoryboard.storyboard */; };
 		821CE4EE159DE6F000E025DB /* FreeVisualTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 821CE4EC159DE6F000E025DB /* FreeVisualTimer.xcdatamodeld */; };
 		821CE4F1159DE6F000E025DB /* centroMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE4F0159DE6F000E025DB /* centroMainViewController.m */; };
 		821CE4F4159DE6F000E025DB /* centroFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE4F3159DE6F000E025DB /* centroFlipsideViewController.m */; };
@@ -22,15 +21,13 @@
 		821CE4FD159DE6F000E025DB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D5159DE6F000E025DB /* GLKit.framework */; };
 		821CE4FE159DE6F000E025DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4D7159DE6F000E025DB /* Foundation.framework */; };
 		821CE4FF159DE6F000E025DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821CE4DB159DE6F000E025DB /* CoreData.framework */; };
-		821CE507159DE6F000E025DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 821CE505159DE6F000E025DB /* InfoPlist.strings */; };
-		821CE50A159DE6F000E025DB /* FreeVisualTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 821CE509159DE6F000E025DB /* FreeVisualTimerTests.m */; };
+		824AF44B15B652480072E88D /* FreeVisualTimer-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824AF44A15B652480072E88D /* FreeVisualTimer-iPad.xib */; };
 		825FF26B15A1BF7C00D8EEAE /* alarm-clock-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26515A1BF7C00D8EEAE /* alarm-clock-1.mp3 */; };
 		825FF26C15A1BF7C00D8EEAE /* clock-ticking-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26615A1BF7C00D8EEAE /* clock-ticking-1.mp3 */; };
 		825FF26D15A1BF7C00D8EEAE /* clock-ticking-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26715A1BF7C00D8EEAE /* clock-ticking-2.mp3 */; };
 		825FF26E15A1BF7C00D8EEAE /* clock-winding-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26815A1BF7C00D8EEAE /* clock-winding-1.mp3 */; };
 		825FF26F15A1BF7C00D8EEAE /* crank-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26915A1BF7C00D8EEAE /* crank-1.mp3 */; };
 		825FF27015A1BF7C00D8EEAE /* crank-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825FF26A15A1BF7C00D8EEAE /* crank-2.mp3 */; };
-		82900B5C159EB87A00BD3FB0 /* GLKTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82900B5B159EB87A00BD3FB0 /* GLKTimerViewController.m */; };
 		82900B5F159EBBBD00BD3FB0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82900B5E159EBBBD00BD3FB0 /* OpenGLES.framework */; };
 		82900B61159EBBFD00BD3FB0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82900B60159EBBFD00BD3FB0 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -57,7 +54,6 @@
 		821CE4E5159DE6F000E025DB /* FreeVisualTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FreeVisualTimer-Prefix.pch"; sourceTree = "<group>"; };
 		821CE4E6159DE6F000E025DB /* centroAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = centroAppDelegate.h; sourceTree = "<group>"; };
 		821CE4E7159DE6F000E025DB /* centroAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = centroAppDelegate.m; sourceTree = "<group>"; };
-		821CE4EA159DE6F000E025DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		821CE4ED159DE6F000E025DB /* FreeVisualTimer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FreeVisualTimer.xcdatamodel; sourceTree = "<group>"; };
 		821CE4EF159DE6F000E025DB /* centroMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = centroMainViewController.h; sourceTree = "<group>"; };
 		821CE4F0159DE6F000E025DB /* centroMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = centroMainViewController.m; sourceTree = "<group>"; };
@@ -65,18 +61,13 @@
 		821CE4F3159DE6F000E025DB /* centroFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = centroFlipsideViewController.m; sourceTree = "<group>"; };
 		821CE4FA159DE6F000E025DB /* FreeVisualTimerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeVisualTimerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		821CE4FB159DE6F000E025DB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		821CE504159DE6F000E025DB /* FreeVisualTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FreeVisualTimerTests-Info.plist"; sourceTree = "<group>"; };
-		821CE506159DE6F000E025DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		821CE508159DE6F000E025DB /* FreeVisualTimerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FreeVisualTimerTests.h; sourceTree = "<group>"; };
-		821CE509159DE6F000E025DB /* FreeVisualTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreeVisualTimerTests.m; sourceTree = "<group>"; };
+		824AF44A15B652480072E88D /* FreeVisualTimer-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "FreeVisualTimer-iPad.xib"; path = "resources/FreeVisualTimer-iPad.xib"; sourceTree = SOURCE_ROOT; };
 		825FF26515A1BF7C00D8EEAE /* alarm-clock-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "alarm-clock-1.mp3"; sourceTree = "<group>"; };
 		825FF26615A1BF7C00D8EEAE /* clock-ticking-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "clock-ticking-1.mp3"; sourceTree = "<group>"; };
 		825FF26715A1BF7C00D8EEAE /* clock-ticking-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "clock-ticking-2.mp3"; sourceTree = "<group>"; };
 		825FF26815A1BF7C00D8EEAE /* clock-winding-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "clock-winding-1.mp3"; sourceTree = "<group>"; };
 		825FF26915A1BF7C00D8EEAE /* crank-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "crank-1.mp3"; sourceTree = "<group>"; };
 		825FF26A15A1BF7C00D8EEAE /* crank-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "crank-2.mp3"; sourceTree = "<group>"; };
-		82900B5A159EB87A00BD3FB0 /* GLKTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKTimerViewController.h; sourceTree = "<group>"; };
-		82900B5B159EB87A00BD3FB0 /* GLKTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLKTimerViewController.m; sourceTree = "<group>"; };
 		82900B5E159EBBBD00BD3FB0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		82900B60159EBBFD00BD3FB0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		82A6CC19159F4EC400E9CB56 /* PieChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PieChartView.h; path = app/PieChartView.h; sourceTree = SOURCE_ROOT; };
@@ -114,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				821CE4DD159DE6F000E025DB /* FreeVisualTimer */,
-				821CE502159DE6F000E025DB /* FreeVisualTimerTests */,
 				821CE4D4159DE6F000E025DB /* Frameworks */,
 				821CE4D2159DE6F000E025DB /* Products */,
 			);
@@ -150,15 +140,13 @@
 				82A6CC19159F4EC400E9CB56 /* PieChartView.h */,
 				821CE4E6159DE6F000E025DB /* centroAppDelegate.h */,
 				821CE4E7159DE6F000E025DB /* centroAppDelegate.m */,
-				821CE4E9159DE6F000E025DB /* MainStoryboard.storyboard */,
 				821CE4EF159DE6F000E025DB /* centroMainViewController.h */,
 				821CE4F0159DE6F000E025DB /* centroMainViewController.m */,
 				821CE4F2159DE6F000E025DB /* centroFlipsideViewController.h */,
+				824AF44A15B652480072E88D /* FreeVisualTimer-iPad.xib */,
 				821CE4F3159DE6F000E025DB /* centroFlipsideViewController.m */,
 				821CE4EC159DE6F000E025DB /* FreeVisualTimer.xcdatamodeld */,
 				821CE4DE159DE6F000E025DB /* Supporting Files */,
-				82900B5A159EB87A00BD3FB0 /* GLKTimerViewController.h */,
-				82900B5B159EB87A00BD3FB0 /* GLKTimerViewController.m */,
 			);
 			path = FreeVisualTimer;
 			sourceTree = "<group>";
@@ -170,25 +158,6 @@
 				821CE4E0159DE6F000E025DB /* InfoPlist.strings */,
 				821CE4E3159DE6F000E025DB /* main.m */,
 				821CE4E5159DE6F000E025DB /* FreeVisualTimer-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		821CE502159DE6F000E025DB /* FreeVisualTimerTests */ = {
-			isa = PBXGroup;
-			children = (
-				821CE508159DE6F000E025DB /* FreeVisualTimerTests.h */,
-				821CE509159DE6F000E025DB /* FreeVisualTimerTests.m */,
-				821CE503159DE6F000E025DB /* Supporting Files */,
-			);
-			path = FreeVisualTimerTests;
-			sourceTree = "<group>";
-		};
-		821CE503159DE6F000E025DB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				821CE504159DE6F000E025DB /* FreeVisualTimerTests-Info.plist */,
-				821CE505159DE6F000E025DB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -279,13 +248,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				821CE4E2159DE6F000E025DB /* InfoPlist.strings in Resources */,
-				821CE4EB159DE6F000E025DB /* MainStoryboard.storyboard in Resources */,
 				825FF26B15A1BF7C00D8EEAE /* alarm-clock-1.mp3 in Resources */,
 				825FF26C15A1BF7C00D8EEAE /* clock-ticking-1.mp3 in Resources */,
 				825FF26D15A1BF7C00D8EEAE /* clock-ticking-2.mp3 in Resources */,
 				825FF26E15A1BF7C00D8EEAE /* clock-winding-1.mp3 in Resources */,
 				825FF26F15A1BF7C00D8EEAE /* crank-1.mp3 in Resources */,
 				825FF27015A1BF7C00D8EEAE /* crank-2.mp3 in Resources */,
+				824AF44B15B652480072E88D /* FreeVisualTimer-iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +262,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				821CE507159DE6F000E025DB /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +293,6 @@
 				821CE4EE159DE6F000E025DB /* FreeVisualTimer.xcdatamodeld in Sources */,
 				821CE4F1159DE6F000E025DB /* centroMainViewController.m in Sources */,
 				821CE4F4159DE6F000E025DB /* centroFlipsideViewController.m in Sources */,
-				82900B5C159EB87A00BD3FB0 /* GLKTimerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +300,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				821CE50A159DE6F000E025DB /* FreeVisualTimerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,22 +318,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				821CE4E1159DE6F000E025DB /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		821CE4E9159DE6F000E025DB /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				821CE4EA159DE6F000E025DB /* en */,
-			);
-			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
-		821CE505159DE6F000E025DB /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				821CE506159DE6F000E025DB /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

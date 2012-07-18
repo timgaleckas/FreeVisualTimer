@@ -16,7 +16,5 @@
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
 
 @property (weak, nonatomic) IBOutlet PieChartView *timerPieChartView;
-- (IBAction)start_stop_tapped:(id)sender;
-- (IBAction)reset_tapped:(id)sender;
 
 @end
