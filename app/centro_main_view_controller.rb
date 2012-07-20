@@ -54,16 +54,11 @@ class CentroMainViewController < UIViewController
       if self.started
         self.stop!
       else
-        @timer = NSTimer.scheduledTimerWithTimeInterval(0.03, target:self, selector:'update_pie_view', userInfo:nil, repeats:true)
-        self.started = true
-        self.time_last_checked = Time.now
-        self.start_button.setTitle('Stop',forState:0)
+        self.start!
       end
     end
     self.reset_button.when(UIControlEventTouchUpInside) do
-      if self.started
-        self.stop!
-      end
+      self.stop!
       self.crank_sound.play
       self.time_last_checked = nil
       self.started = false
@@ -76,16 +71,6 @@ class CentroMainViewController < UIViewController
       update_pie_view
     end
   end
-
-  def stop!
-    self.started = false
-    self.time_last_checked = nil
-    self.ticking_sound.stop
-    @timer.invalidate
-    @timer = nil
-    self.start_button.setTitle('Start',forState:0)
-  end
-
 
   def duration_did_change(new_duration)
     self.duration = new_duration
@@ -106,8 +91,6 @@ class CentroMainViewController < UIViewController
     self.flipsidePopoverController = nil
   end
 
-  private
-
   def load_caf(name)
     path = NSBundle.mainBundle.pathForResource(name, ofType:'caf')
     url = NSURL.fileURLWithPath(path)
@@ -120,10 +103,13 @@ class CentroMainViewController < UIViewController
   def update_pie_view
     return unless self.timer_pie_chart_view
     update_time_left
-    self.timer_pie_chart_view.pie_items[0] ||= PieChartItem.new(1,white)
-    self.timer_pie_chart_view.pie_items[1] ||= PieChartItem.new(1,red)
-    self.timer_pie_chart_view.pie_items[0].value = self.duration - self.time_left
-    self.timer_pie_chart_view.pie_items[1].value = self.time_left
+    unless self.flipsidePopoverController
+      self.timer_pie_chart_view.pie_items[0] ||= PieChartItem.new(1,white)
+      self.timer_pie_chart_view.pie_items[1] ||= PieChartItem.new(1,red)
+      self.timer_pie_chart_view.pie_items[0].value = self.duration - self.time_left
+      self.timer_pie_chart_view.pie_items[1].value = self.time_left
+      self.timer_pie_chart_view.setNeedsDisplay
+    end
     if self.started
       self.ticking_sound.play if self.ticking_sound.currentTime = 0.0
       if time_left < 0.01
@@ -131,7 +117,6 @@ class CentroMainViewController < UIViewController
         self.started = false
       end
     end
-    self.timer_pie_chart_view.setNeedsDisplay
   end
 
   def white; PieChartItemColor.new(1.0, 1.0, 1.0, 1.0); end
@@ -147,6 +132,26 @@ class CentroMainViewController < UIViewController
 
   def seconds_passed
     self.time_last_checked ? (Time.now - self.time_last_checked) : 0
+  end
+
+  def start!
+    unless self.started
+      self.started = true
+      self.time_last_checked = Time.now
+      @timer = NSTimer.scheduledTimerWithTimeInterval(0.03, target:self, selector:'update_pie_view', userInfo:nil, repeats:true)
+      self.start_button.setTitle('Stop',forState:0)
+    end
+  end
+
+  def stop!
+    if self.started
+      self.started = false
+      self.time_last_checked = nil
+      self.ticking_sound.stop
+      @timer.invalidate
+      @timer = nil
+      self.start_button.setTitle('Start',forState:0)
+    end
   end
 
   def alarm!
