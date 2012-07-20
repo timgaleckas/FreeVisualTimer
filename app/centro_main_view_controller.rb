@@ -1,7 +1,7 @@
 class CentroMainViewController < UIViewController
   attr_accessor :flipsidePopoverController
   attr_reader   :duration
-  attr_accessor :start_button, :reset_button, :settings_button, :timer_pie_chart_view
+  attr_accessor :start_button, :reset_button, :settings_button, :timer_view
   attr_accessor :time_last_checked, :time_left, :started
 
   def duration=(new_duration)
@@ -32,7 +32,7 @@ class CentroMainViewController < UIViewController
     self.view = AppDelegate.nib[0]
 
     self.settings_button = self.view.subviews[0].subviews.last
-    self.timer_pie_chart_view, self.start_button, self.reset_button = view.subviews[-3,3]
+    self.timer_view, self.start_button, self.reset_button = view.subviews[-3,3]
 
     self.settings_button.when(UIControlEventTouchUpInside) do
       unless self.flipsidePopoverController
@@ -101,26 +101,19 @@ class CentroMainViewController < UIViewController
   end
 
   def update_pie_view
-    return unless self.timer_pie_chart_view
+    return unless self.timer_view
     update_time_left
     unless self.flipsidePopoverController
-      self.timer_pie_chart_view.pie_items[0] ||= PieChartItem.new(1,white)
-      self.timer_pie_chart_view.pie_items[1] ||= PieChartItem.new(1,red)
-      self.timer_pie_chart_view.pie_items[0].value = self.duration - self.time_left
-      self.timer_pie_chart_view.pie_items[1].value = self.time_left
-      self.timer_pie_chart_view.setNeedsDisplay
+      self.timer_view.update(self.duration, self.time_left)
     end
     if self.started
       self.ticking_sound.play if self.ticking_sound.currentTime = 0.0
       if time_left < 0.01
         alarm!
-        self.started = false
+        stop!
       end
     end
   end
-
-  def white; PieChartItemColor.new(1.0, 1.0, 1.0, 1.0); end
-  def red;   PieChartItemColor.new(1.0, 0.0, 0.0, 1.0); end
 
   def update_time_left
     if self.time_last_checked
